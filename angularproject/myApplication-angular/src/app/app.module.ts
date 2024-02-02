@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
 import { FormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [    //update this when compo/directive/pipe are generate
     AppComponent,
     HomeComponent,
-    DatabindingComponent 
+    DatabindingComponent,
+    TestComponent 
   
   ],
   imports: [      // update import when modules are genrate
