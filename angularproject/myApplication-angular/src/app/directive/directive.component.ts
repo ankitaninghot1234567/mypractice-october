@@ -9,13 +9,17 @@ export class DirectiveComponent {
   showDiv : boolean=true;
 listItem = ['coffee','milk','water','sugar','tea','ponds','maggi','chocolet'];
  
-color ='black';
+color ='pink';
 
-
+backgroundName : any ="pink"
 
   toggle(){
     this.showDiv=!this.showDiv;
      
+  } 
+
+  getColor(){
+    return this.backgroundName;
   }
 
 }

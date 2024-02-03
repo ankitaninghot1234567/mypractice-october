@@ -9,10 +9,12 @@
 </ul>
 
 <div [ngSwitch]="true">
-    <p *ngSwitchCase="color === 'yellow'">i like {{yellow}}</p>
-    <p *ngSwitchCase="color === 'black'">i like {{black}}</p>
-    <p *ngSwitchCase="color === 'purple'">i like {{purple}}</p>
-    <p *ngSwitchCase="color === 'black'">i like {{black}}</p>
-    <p *ngSwitchCase="color === 'pink'">i like {{pink}}</p>
+    <p *ngSwitchCase="color === 'yellow'">i like {{color}}</p>
+    <p *ngSwitchCase="color === 'black'">i like {{color}}</p>
+    <p *ngSwitchCase="color === 'purple'">i like {{color}}</p>
+    <p *ngSwitchCase="color === 'blue'">i like {{color}}</p>
+    <p *ngSwitchCase="color === 'pink'">i like {{color}}</p>
     <p *ngSwitchDefault>i don't like color</p>
-</div>
+</div> <br> <br>
+
+<div [ngstyle]="{backgroundColor: getColor()}"> i like yellow</div>  
