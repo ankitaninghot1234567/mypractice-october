@@ -12,6 +12,7 @@ listItem = ['coffee','milk','water','sugar','tea','ponds','maggi','chocolet'];
 color ='pink';
 
 backgroundName : any ="pink"
+journy:any="user"
 
   toggle(){
     this.showDiv=!this.showDiv;
@@ -19,7 +20,7 @@ backgroundName : any ="pink"
   } 
 
   getColor(){
-    return this.backgroundName;
+   return this.backgroundName;
   }
 
 }

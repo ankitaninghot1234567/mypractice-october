@@ -16,5 +16,13 @@
     <p *ngSwitchCase="color === 'pink'">i like {{color}}</p>
     <p *ngSwitchDefault>i don't like color</p>
 </div> <br> <br>
+<div style="color: aqua; font-size: 30px;"> i like pune </div>
 
-<div [ngstyle]="{backgroundColor: getColor()}"> i like yellow</div>  
+<!-- <div  [ngstyle] ="{backgroundColor: getColor()}"> i like yellow</div>  -->
+
+<div class ="div-container1"> i like india</div>
+<div [class.div-container1] ="journy=='admin'"
+    [class.div-container2] ="journy=='user'"
+    [class.div-container] ="journy=='owner'"> i like india</div>
+
+
