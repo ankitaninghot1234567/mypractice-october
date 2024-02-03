@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class DirectiveComponent {  
   showDiv : boolean=true;
+listItem = ['coffee','milk','water','sugar','tea','ponds','maggi','chocolet'];
+ 
+color ='black';
+
+
 
   toggle(){
     this.showDiv=!this.showDiv;

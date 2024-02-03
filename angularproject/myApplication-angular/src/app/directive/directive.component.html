@@ -1,3 +1,18 @@
-<p>directive works!</p>
-<div class="div-container" *ngIf="showDiv"></div>
-<button (click)="toggle()">toggle</button>
+<p>directive works!</p> 
+
+<div class="div-container" *ngIf="showDiv"></div> <br>
+
+<button (click)="toggle()">toggle</button> <br>
+
+<ul>
+    <li *ngFor="let item of listItem">{{item}}</li>
+</ul>
+
+<div [ngSwitch]="true">
+    <p *ngSwitchCase="color === 'yellow'">i like {{yellow}}</p>
+    <p *ngSwitchCase="color === 'black'">i like {{black}}</p>
+    <p *ngSwitchCase="color === 'purple'">i like {{purple}}</p>
+    <p *ngSwitchCase="color === 'black'">i like {{black}}</p>
+    <p *ngSwitchCase="color === 'pink'">i like {{pink}}</p>
+    <p *ngSwitchDefault>i don't like color</p>
+</div>
