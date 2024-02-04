@@ -1,1 +1,29 @@
-<p>user-login works!</p>
+
+<div class="form-container">
+    <h1>Login Form</h1>
+    <form  #loginForm="ngForm">
+
+        <label for="">Username</label><br>
+        <input type="text" #userName="ngModel" ngModel name="Uname"
+         required pattern="^[a-zA-Z]*$" minlength="2" maxlength="20">
+        
+         <div *ngIf="userName?.errors?.['required'] && userName?.touched"  class="error-msg">
+            user name is required</div>
+         
+        <div *ngIf="userName?.errors?.['pattern'] && !userName?.errors?.['minlength']" class="error-msg">
+                username must be alphabet</div>
+
+         <div *ngIf="userName?.errors?.['minlength']" class="error-msg">
+            minlength must be 2</div><br>
+
+    <label for="">password</label><br>
+        <input type="text" #pass="ngModel" ngModel name="password" 
+        required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$"> <br> 
+        <div  *ngIf="pass?.errors?.['required'] &&pass?.touched" class="error-msg"> password is required</div> 
+        <div *ngIf="pass?.errors?.['pattern']"  class="error-msg">Invalid password</div><br>
+
+
+        <button (click)="Login(loginForm.value)">submit</button> 
+
+    </form>
+</div>
