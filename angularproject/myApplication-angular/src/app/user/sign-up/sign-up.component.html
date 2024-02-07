@@ -1,1 +1,61 @@
-<p>sign-up works!</p>
+
+
+<div class="form">
+    <form [formGroup]="signupForm">
+
+        <mat-form-field class="mat-form-field">
+            <mat-label>Full Name</mat-label>
+            <input type="text" matInput formControlName="FullName"><br>
+
+            <mat-hint *ngIf="!signupForm.get('FullName')?.touched">Please enter your name</mat-hint>
+            <mat-error *ngIf="signupForm.get('FullName')?.errors?.['required'] && signupForm.get('FullName')?.touched">
+                full Name is required</mat-error>
+
+        </mat-form-field> <br>
+
+
+        <mat-form-field class="mat-form-field">
+
+            <mat-label>Mb.No.</mat-label>
+            <input type="text" matInput matInpu formControlName="Mb"> <br>
+
+            <mat-hint>please enter your mb no</mat-hint>
+            <mat-error *ngIf="signupForm.get('Mb')?.errors?.['maxlength'] && signupForm.get('Mb')?.touched">
+                maxlength must be 10digit</mat-error>
+            <mat-error *ngIf="signupForm.get('Mb')?.errors?.['pattern'] && signupForm.get('Mb')?.touched 
+          && !signupForm.get('Mb')?.errors?.['maxlength']">
+                Invalid patterm</mat-error>
+
+        </mat-form-field><br>
+
+        <mat-form-field class="mat-form-field">
+            <mat-label>pan card</mat-label>
+            <input type="text" matInput formControlName="pancard">
+        </mat-form-field><br>
+
+        <mat-form-field class="mat-form-field">
+            <mat-label>password</mat-label>
+            <input type="text" matInput formControlName="password">
+        </mat-form-field><br>
+
+        <mat-form-field class="mat-form-field">
+            <mat-label>confirm password</mat-label>
+            <input type="text" matInput formControlName="confirmpassword">
+        </mat-form-field><br>
+
+        <mat-label>Gender</mat-label>
+        <mat-radio-group formControlName="Gender">
+            <mat-radio-button>male</mat-radio-button>
+            <mat-radio-button>famale</mat-radio-button>
+        </mat-radio-group>
+
+        <br>
+
+
+
+
+
+
+        <button mat-raised-button color="accent" class="button">submit</button>
+    </form>
+</div>

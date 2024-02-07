@@ -6,9 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  defaltvalue="ankita"
-  Login(data:any){
-    console.log(data);
 
-}
+  isShowPass = false;
+
+  defaltvalue = "ankita"
+
+  Login(data: any) {
+    console.log(data);
+   let username = data.Uname.replace(/\s+/g, ' ');
+  console.log(username);
+
+  let request ={
+    "UserName": username,
+    "PassWord" : data.password
+
+  }
+  
+  }
+
+  toShowPassword() {
+    this.isShowPass = !this.isShowPass;
+  }
+
+
 }
