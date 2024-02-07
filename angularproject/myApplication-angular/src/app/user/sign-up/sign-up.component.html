@@ -20,17 +20,22 @@
             <input type="text" matInput matInpu formControlName="Mb"> <br>
 
             <mat-hint>please enter your mb no</mat-hint>
+            
             <mat-error *ngIf="signupForm.get('Mb')?.errors?.['maxlength'] && signupForm.get('Mb')?.touched">
                 maxlength must be 10digit</mat-error>
-            <mat-error *ngIf="signupForm.get('Mb')?.errors?.['pattern'] && signupForm.get('Mb')?.touched 
-          && !signupForm.get('Mb')?.errors?.['maxlength']">
-                Invalid patterm</mat-error>
 
+          <mat-error *ngIf="signupForm.get('Mb')?.errors?.['minlength'] && signupForm.get('Mb')?.touched">
+            onply 10digit required</mat-error>
+             
         </mat-form-field><br>
 
         <mat-form-field class="mat-form-field">
-            <mat-label>pan card</mat-label>
+            <mat-label >pan card</mat-label>
             <input type="text" matInput formControlName="pancard">
+         <mat-hint> enter your pancard</mat-hint>
+            <mat-error *ngIf="signupForm.get('Mb')?.errors?.['pattern'] && signupForm.get('Mb')?.touched">
+              wrong patterm</mat-error>
+
         </mat-form-field><br>
 
         <mat-form-field class="mat-form-field">

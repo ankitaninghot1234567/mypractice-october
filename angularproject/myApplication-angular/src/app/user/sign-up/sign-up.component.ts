@@ -17,8 +17,8 @@ ngOnInit(){
 formDetails(){
   this.signupForm = this.formBuilder.group({
     FullName:['', [Validators.required]],
-    Mb:[null,[Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
-    pancard:[],
+    Mb:[null,[Validators.maxLength(10),Validators.pattern("^[0-9]*$"),Validators.minLength(10)]],
+    pancard:['',[Validators.pattern("[A-Za-z0-9]+")]],
     password:[],
     confirmpassword:[],
     Gender:[],
