@@ -8,10 +8,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatIconModule} from '@angular/material/icon';
+import { UserSucessComponent } from './user-sucess/user-sucess.component';
 @NgModule({
   declarations: [
     UserLoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    UserSucessComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +23,9 @@ import {MatRadioModule} from '@angular/material/radio';
     ReactiveFormsModule,
     MatButtonModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    MatIconModule
+
   ]
 })
 export class UserModule {

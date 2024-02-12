@@ -5,62 +5,69 @@
 
         <mat-form-field class="mat-form-field">
             <mat-label>Full Name</mat-label>
+
             <input type="text" matInput formControlName="FullName"><br>
-
             <mat-hint *ngIf="!signupForm.get('FullName')?.touched">Please enter your name</mat-hint>
-            <mat-error *ngIf="signupForm.get('FullName')?.errors?.['required'] && signupForm.get('FullName')?.touched">
-                full Name is required</mat-error>
-
+            <mat-error *ngIf="signupForm.get('FullName')?.errors?.['required'] && signupForm.get('FullName')?.touched">full Name is required</mat-error>
+            <mat-error *ngIf="signupForm.get('fullName')?.errors?.['whiteSpaceError']">
+                fullname should not include more than one space</mat-error>
         </mat-form-field> <br>
 
 
         <mat-form-field class="mat-form-field">
 
             <mat-label>Mb.No.</mat-label>
-            <input type="text" matInput matInpu formControlName="Mb"> <br>
 
-            <mat-hint>please enter your mb no</mat-hint>
-            
+            <input type="" matInput matInpu formControlName="Mb"> <br>
+            <mat-hint *ngIf="!signupForm.get('Mb')?.touched">please enter your mb no</mat-hint>
+            <mat-error *ngIf="signupForm.get('Mb')?.errors?.['required'] && signupForm.get('Mb')?.touched">
+                mb no is required</mat-error>
             <mat-error *ngIf="signupForm.get('Mb')?.errors?.['maxlength'] && signupForm.get('Mb')?.touched">
                 maxlength must be 10digit</mat-error>
+            <mat-error *ngIf="signupForm.get('Mb')?.errors?.['minlength'] && signupForm.get('Mb')?.touched">only 10digit required</mat-error>
 
-          <mat-error *ngIf="signupForm.get('Mb')?.errors?.['minlength'] && signupForm.get('Mb')?.touched">
-            onply 10digit required</mat-error>
-             
         </mat-form-field><br>
 
         <mat-form-field class="mat-form-field">
-            <mat-label >pan card</mat-label>
+            <mat-label>pan card</mat-label>
+
             <input type="text" matInput formControlName="pancard">
-         <mat-hint> enter your pancard</mat-hint>
-            <mat-error *ngIf="signupForm.get('Mb')?.errors?.['pattern'] && signupForm.get('Mb')?.touched">
-              wrong patterm</mat-error>
+            <mat-error *ngIf="signupForm.get('pancard')?.errors?.['required'] && signupForm.get('pancard')?.touched"> pancard is required</mat-error>
+            <mat-hint *ngIf="!signupForm.get('pancard')?.touched"> enter your pancard no.</mat-hint>
+            <mat-error *ngIf="signupForm.get('pancard')?.errors?.['pattern'] && signupForm.get('pancard')?.touched"> wrong pancard no.</mat-error>
 
         </mat-form-field><br>
 
         <mat-form-field class="mat-form-field">
             <mat-label>password</mat-label>
-            <input type="text" matInput formControlName="password">
-        </mat-form-field><br>
+
+            <input [type]="visible ? 'text' : 'password'" 
+            (keyup)="passMatch()" matInput formControlName="password">
+            <mat-icon matSuffix  matSuffix *ngIf="visible" (click)="visiblePassword()">
+                visibility </mat-icon>
+            <mat-icon matSuffix  matSuffix *ngIf="!visible"  (click)="visiblePassword()"> visibility_off </mat-icon>
+            
+          </mat-form-field>
+         <br>
 
         <mat-form-field class="mat-form-field">
             <mat-label>confirm password</mat-label>
-            <input type="text" matInput formControlName="confirmpassword">
-        </mat-form-field><br>
+           
+            <input [type]="visible1 ? 'text' : 'password'" matInput formControlName="confirmpassword">
+            <mat-icon   matSuffix *ngIf="visible1" (click)="visiblePassword1()">visibility</mat-icon>
+            <mat-icon matSuffix  *ngIf="!visible1"  (click)="visiblePassword1()">visibility_off </mat-icon> 
+            </mat-form-field> <mat-error *ngIf="isMatch">password and confirmpassword must be same </mat-error><br> 
 
         <mat-label>Gender</mat-label>
         <mat-radio-group formControlName="Gender">
-            <mat-radio-button>male</mat-radio-button>
-            <mat-radio-button>famale</mat-radio-button>
+            <mat-radio-button value="male">male</mat-radio-button>
+            <mat-radio-button value="famale">famale</mat-radio-button>
         </mat-radio-group>
+  <br>
+  <input type="checkbox" formControlName="tc"> I agree Terms and condions 
+  <br>
+  <button mat-raised-button color="accent" class="button" (click)="submit()"
+   [disabled]="!signupForm.valid">Submit</button>
 
-        <br>
-
-
-
-
-
-
-        <button mat-raised-button color="accent" class="button">submit</button>
     </form>
 </div>
