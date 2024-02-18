@@ -11,6 +11,9 @@ import { DirectiveComponent } from './directive/directive.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { SearchPipe } from './search.pipe';
+import { NumberOnlyDirective } from './number-only.directive';
 
 @NgModule({
   declarations: [    //update this when compo/directive/pipe are generate
@@ -20,7 +23,10 @@ import { ChildComponent } from './child/child.component';
     TestComponent,
     DirectiveComponent,
     ParentComponent,
-    ChildComponent 
+    ChildComponent,
+    PipeComponent,
+    SearchPipe,
+    NumberOnlyDirective 
   
   ],
   imports: [      // update import when modules are genrate
