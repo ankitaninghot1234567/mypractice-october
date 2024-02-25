@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { DataService } from '../data.service';
+
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-user-sucess',
@@ -12,6 +13,6 @@ export class UserSucessComponent {
   constructor(private dataService:DataService, private router : Router){}
 
 ngOnInit(){
-  this.name= this.dataService.UserName;
+  this.name= this.dataService.userName;
 }
 }

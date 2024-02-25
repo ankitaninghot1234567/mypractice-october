@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/user/data.service';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-subject3',

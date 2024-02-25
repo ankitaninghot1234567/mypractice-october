@@ -5,7 +5,7 @@
 
         <label for="">Username</label><br>
         <input type="text" #userName="ngModel" ngModel name="Uname"
-         required  pattern="^[a-zA-Z ]*$" minlength="2" maxlength="20" [(ngModel)]="defaltvalue" >
+         required  pattern="^[a-zA-Z ]*$" minlength="2" maxlength="20" [(ngModel)]="defaltvalue " >
         
         
          <div *ngIf="userName?.errors?.['required'] && userName?.touched"  class="error-msg">

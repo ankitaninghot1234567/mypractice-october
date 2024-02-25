@@ -1,20 +1,156 @@
 {
-  "admin": [
+  "master": [
     {
-      "id": "4e12",
-      "name": "ankita",
-      "age": 29,
-      "city": "pune",
-      "mb. no.": 7756234564
+      "id": "02e0",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "ASD123qwe",
+      "password": "ankita@1234",
+      "confirmpassword": "ksdlanjdkjwj",
+      "Gender": "male",
+      "tc": true
     },
     {
-      "id": "be25",
-      "name": "anurag",
-      "age": 29,
-      "city": "mumbai",
-      "mb. no.": 7756234564
+      "id": "2804",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "ASD123qwe",
+      "password": "ankita@1234",
+      "confirmpassword": "ksdlanjdkjwj",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "7750",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "ASD123qwe",
+      "password": "ankita@1234",
+      "confirmpassword": "ksdlanjdkjwj",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "be85",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "ASD123qwe",
+      "password": "ankita@1234",
+      "confirmpassword": "ksdlanjdkjwj",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "3f11",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "ASD123qwe",
+      "password": "ankita@1234",
+      "confirmpassword": "ksdlanjdkjwj",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "ec1e",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "asd123",
+      "password": "sdsds",
+      "confirmpassword": "sdsds",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "3086",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "asd123",
+      "password": "sdsds",
+      "confirmpassword": "sdsds",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "f14a",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "asd123",
+      "password": "sdsds",
+      "confirmpassword": "sdsds",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "5885",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "asd123",
+      "password": "sdsds",
+      "confirmpassword": "sdsds",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "a7d0",
+      "FullName": "ankita kale ",
+      "Mb": "1234567894",
+      "pancard": "asd123",
+      "password": "sdsds",
+      "confirmpassword": "sdsds",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "03e4",
+      "FullName": "anurag kale ",
+      "Mb": "1234567894",
+      "pancard": "asdqw123",
+      "password": "anu@123",
+      "confirmpassword": "anu@123",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "4160",
+      "FullName": "anurag kale ",
+      "Mb": "1234567894",
+      "pancard": "asdqw123",
+      "password": "anu@123",
+      "confirmpassword": "anu@123",
+      "Gender": "male",
+      "tc": true
+    },
+    {
+      "id": "f80b",
+      "FullName": "ankita akle ",
+      "Mb": "1234567894",
+      "pancard": "asd123qwe",
+      "password": "ankita12@qw",
+      "confirmpassword": "ankita12@qw",
+      "Gender": "famale",
+      "tc": true
+    },
+    {
+      "id": "5ed2",
+      "FullName": "ankita akle ",
+      "Mb": "1234567894",
+      "pancard": "asd123qwe",
+      "password": "ankita12@qw",
+      "confirmpassword": "ankita12@qw",
+      "Gender": "famale",
+      "tc": true
+    },
+    {
+      "id": "609a",
+      "FullName": "ankita kale ",
+      "Mb": "1234567945",
+      "pancard": "asdwqw123",
+      "password": " private router:Router",
+      "confirmpassword": " private router:Router",
+      "Gender": "male",
+      "tc": true
     }
   ],
-  "user": [],
-  "owener": {}
+  "parent": [],
+  "child": []
 }

@@ -13,7 +13,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SearchPipe } from './search.pipe';
-import { NumberOnlyDirective } from './number-only.directive';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [    //update this when compo/directive/pipe are generate
@@ -26,15 +28,16 @@ import { NumberOnlyDirective } from './number-only.directive';
     ChildComponent,
     PipeComponent,
     SearchPipe,
-    NumberOnlyDirective 
+
   
   ],
   imports: [      // update import when modules are genrate
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

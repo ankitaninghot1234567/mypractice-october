@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApicallService } from 'src/app/apicall.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,7 +14,7 @@ export class SignUpComponent {
   visible1=false;
   isMatch =false;
   
-  constructor(private formBuilder : FormBuilder){
+  constructor(private formBuilder : FormBuilder,private apicallService:ApicallService, private router:Router){
 }
 ngOnInit(){
   this.formDetails();
@@ -46,6 +48,8 @@ passMatch(){
 }
 submit(){
   console.log(this.signupForm.value,this.signupForm.value);
+  this.apicallService.postApilcall(this.signupForm.value).subscribe(repose=>{})
+  this.router.navigateByUrl("/user/userSucc")
   
 }
 

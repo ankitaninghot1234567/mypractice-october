@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import { UserSucessComponent } from './user-sucess/user-sucess.component';
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     UserLoginComponent,
@@ -24,7 +25,8 @@ import { UserSucessComponent } from './user-sucess/user-sucess.component';
     MatButtonModule,
     MatInputModule,
     MatRadioModule,
-    MatIconModule
+    MatIconModule,
+    SharedModule
 
   ]
 })

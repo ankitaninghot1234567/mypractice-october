@@ -18,7 +18,8 @@
 
             <mat-label>Mb.No.</mat-label>
 
-            <input type="" matInput matInpu formControlName="Mb"> <br>
+            <input type="" matInput matInpu formControlName="Mb"  appNumberOnly  > <br>
+
             <mat-hint *ngIf="!signupForm.get('Mb')?.touched">please enter your mb no</mat-hint>
             <mat-error *ngIf="signupForm.get('Mb')?.errors?.['required'] && signupForm.get('Mb')?.touched">
                 mb no is required</mat-error>
@@ -53,7 +54,8 @@
         <mat-form-field class="mat-form-field">
             <mat-label>confirm password</mat-label>
            
-            <input [type]="visible1 ? 'text' : 'password'" matInput formControlName="confirmpassword">
+            <input [type]="visible1 ? 'text' : 'password'" 
+             (keyup)="passMatch()" matInput formControlName="confirmpassword">
             <mat-icon   matSuffix *ngIf="visible1" (click)="visiblePassword1()">visibility</mat-icon>
             <mat-icon matSuffix  *ngIf="!visible1"  (click)="visiblePassword1()">visibility_off </mat-icon> 
             </mat-form-field> <mat-error *ngIf="isMatch">password and confirmpassword must be same </mat-error><br> 

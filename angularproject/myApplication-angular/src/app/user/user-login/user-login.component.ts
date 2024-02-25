@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { DataService } from '../data.service';
+
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-user-login',
@@ -21,7 +22,7 @@ export class UserLoginComponent {
    let username = data.Uname.replace(/\s+/g, ' ');
   //console.log(username);
 
-  this.dataService.UserName=data.Uname//ankita
+  this.dataService.userName=data.Uname//ankita
   this.router.navigateByUrl('/user/userSucc');
 
 

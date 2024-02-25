@@ -5,8 +5,10 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-UserName:any;
 
-studentData = new Subject<any>();
-  constructor( ) { }
+  userName:any;
+  studentData = new Subject<any>();
+  constructor() { }
+
+  
 }
